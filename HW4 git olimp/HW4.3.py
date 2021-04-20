@@ -7,7 +7,7 @@ x = int(input())
 y = int(input())
 u = 0
 i = 1
-while i <y:
+while i <=y:
     x= x + x * 0.1
     i += 1
 print(x,i)
