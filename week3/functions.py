@@ -26,23 +26,31 @@
 
 
 def register(username,password,confirm_password):
-    if len(username) >=8 and not password.isalpha() and password==confirm_password:
-        return username,password
-    else:
-        print('Пароли не совпадают')
+
+    if len(username) >=8 and not password.isalpha():
+        #return username,password
+        if password==confirm_password:
+            return username, password
+
+        else:
+            print('Пароли не совпадают')
+
 try:
     username, password=register(input('username'),input('pas'),input('conf'))  #username,password( тут просто для вида присвоили значения, а так нужно вызвать return)
     print(username,password)
 except TypeError:
     print('введите правильные данные')
-def authorize(username1,password1):
-    for i in range(3):
-        if username1==username and password1==password:
-            print("Success")
-            break
-        else:
-            print('Not success')
-authorize(input('user'),input('pass'))
+
+except NameError:
+    while register(username,password,confirm_password) is True:
+        def authorize(username1,password1):
+            for i in range(3):
+                if username1==username and password1==password:
+                    print("Success")
+                    break
+                else:
+                    print('Not success')
+        authorize(input('user'),input('pass'))
 
 
 

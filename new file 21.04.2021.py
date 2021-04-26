@@ -38,6 +38,10 @@
 # print(file_data)
 
 
-file1=open('text.txt','w')
-file_data=file1.write('hello bem!')
-
+# file1=open('text.txt','w')
+# file_data=file1.write('hello bem!')
+#
+data={}
+data[0]=1
+data[2]=3
+print(data)
