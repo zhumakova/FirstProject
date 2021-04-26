@@ -35,7 +35,7 @@ data = {
     'Topol-M':2000000
 }
 
-                                    """   # def order(name):
+                                     # def order(name):
                                         #     if name in data.keys():
                                         #         return name
                                         #     else:
@@ -87,7 +87,7 @@ def count_money(price,quantity,cash):
         print('success')
         return  cash-price*quantity
     else:
-        print('Недостаточно средств')
+        return 'Недостаточно средств'
 def shop(weapon_name,quantity,cash):
     if weapon_name in data.keys():
 
