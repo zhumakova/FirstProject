@@ -69,18 +69,20 @@ def remove_worker(data=data):
     return data
 data=remove_worker(data=data)
 print(data)
-
+s=[]
 def deletion(data,worker_of_month):
     data1 = data.copy()
     for worker_key, worker_value in worker_of_month.items():
         for worker in worker_value:
+            if worker not in s:
+                s.append(worker)
+            else:
+                same_name=worker
+                print(same_name)
+                for user in data1:
+                    if user['user'] == same_name:
 
-
-            # for user in data1:
-            #     if user['user'] == worker:
-            #         user['salary'] = user['salary'] + (user['salary'] * 0.1)
+                        data.remove(user)
     return data
-
-
 data = deletion(data, worker_of_month)
 print(data)
