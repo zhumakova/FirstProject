@@ -48,15 +48,15 @@ data = best_department(data, worker_of_month)
 print(data)
 def no_worker_of_month_decrease_salary(data,worker_of_month):
     for worker_key, worker_value in worker_of_month.items():
-        if len(worker_value)<1:
-            for department_b in worker_key:
-                for department in data:
-                    if department_b==department['department']:
+         if len(worker_value) == 0:
+            for department in data:
+                if department['department']==worker_key:
                         department['salary'] = department['salary'] - (department['salary'] * 0.03)
 
     return data
 data = no_worker_of_month_decrease_salary(data, worker_of_month)
 print(data)
+
 
 def remove_worker(data=data):
     data_copy=data.copy()
