@@ -1,5 +1,5 @@
 import random
-
+# алгортим Хоара
 
 def q_sort(a):
     if len(a) > 1:
