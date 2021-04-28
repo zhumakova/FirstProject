@@ -84,4 +84,4 @@ users=fill_none(users,purchases,products)
 print(users)
 
 file1=open('test.txt','w')
-file1.write(user['id'],user['total_amount'])
+file1.write('id''total_amount')
