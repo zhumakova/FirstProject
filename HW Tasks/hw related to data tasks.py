@@ -52,7 +52,8 @@ def no_worker_of_month_decrease_salary(data,worker_of_month):
             for department in data:
                 if department['department']==worker_key:
                         department['salary'] = department['salary'] - (department['salary'] * 0.03)
-
+                if department['department'] not in worker_of_month:
+                        department['salary'] = department['salary'] - (department['salary'] * 0.03)
     return data
 data = no_worker_of_month_decrease_salary(data, worker_of_month)
 print(data)
