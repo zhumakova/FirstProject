@@ -82,6 +82,10 @@ def fill_none(users,purchases,products):
 
 users=fill_none(users,purchases,products)
 print(users)
-
-file1=open('test.txt','w')
-file1.write('id''total_amount')
+def to_file(data):
+    file1 = open('test.txt','w')
+    for user in data:
+        result_str = "{} : {} ".format(user['username'],user['total_amount'])
+        file1.write(result_str + '\n')
+    file1.close()
+to_file(users)
