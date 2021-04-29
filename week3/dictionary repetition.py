@@ -32,6 +32,8 @@ blog_id - идентификатор к какому блогу относитс
     1.1. Для этого - требуется вычислить для каждого блога - среднюю оценку всех его post
 2. Вычислить самый популярный post - если с такой оценкой их несколько - вывести все
 """
+top=0
+not_top=20
 for blog in blogs:
     # print(blog)
     avg_sum=0
@@ -41,8 +43,7 @@ for blog in blogs:
             avg_sum+=post['rate']
             sum+=1
             avg=avg_sum/sum
-            top=0
-            not_top=20
+
             blog['average'] = avg
             print(blog)
         if post['rate']>top:
