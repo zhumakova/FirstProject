@@ -30,10 +30,3 @@ for r in response:
     if r['commit']['author']['name'] not in user:
         user.append(r['commit']['author']['name'])
 print(user)
-    
-
-
-
-
-
-
