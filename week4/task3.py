@@ -3,10 +3,10 @@
     1.1 Вывести сообщения длина которых больше 10 и их кол-во
 
 """
-import sys
+
 
 import requests
-url = 'https://api.github.com/repos/{}/{}/commits?page1&per_page=100'.format(sys.argv[1],sys.argv[2])
+url = 'https://api.github.com/repos/zhumakova/FirstProject/commits?page1&per_page=100'
 response = requests.get(url,headers={'Authorization':'Token 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'}).json()
 
 commit=[]
